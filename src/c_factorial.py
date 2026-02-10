@@ -17,6 +17,8 @@ class Factorial:
         employees = response.json().get("data", [])
         for employee in employees:
             logging.info(employee.get("full_name"))
+            logging.info(employee.get("email"))
+
 
         ##employees_data = response.get("data", [])
 
