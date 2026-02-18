@@ -20,7 +20,7 @@ class Factorial:
     def __init__(self):
 
         self.body_html = """<html> <body> <img src="cid:imagen1"> </body> </html>"""
-        self.image_rute = "/opt/project/image/imagen_felicitar_cumpleanios.png"
+        self.image_rute =  "/app/image/imagen_felicitar_cumpleanios.png"
         self.actual_date = datetime.datetime.today().strftime("%m-%d")
         self.smtp_server = os.getenv("SMTP_SERVER")
         self.sender_password = os.getenv("SENDER_PASSWORD")
