@@ -10,7 +10,7 @@ from email.mime.text import MIMEText
 # Falta control de error para nombre correo bien escrito
 
 def comprobar_formato_gmail(email):
-    exp_reg = '([A-Za-z0-9]+[.-_])*[A-Za-z0-9]+@[A-Za-z0-9-]+(\.[A-Z|a-z]{2,})+'
+    exp_reg = r'([A-Za-z0-9]+[.-_])*[A-Za-z0-9]+@[A-Za-z0-9-]+(\.[A-Z|a-z]{2,})+'
     if re.match(exp_reg, email):
         return True
     else:

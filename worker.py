@@ -10,7 +10,6 @@ logging.basicConfig(
 
 def main():
     logging.info("Servicio Python iniciado")
-    logging.critical("muu")
 
     logging.info("Procesandol")
     if Factorial().proceso_cumpleaños():
