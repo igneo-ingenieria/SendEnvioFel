@@ -38,7 +38,6 @@ class Factorial:
         })
 
     def get_employees(self) -> list[Employee]:
-        logging.info("Procesando clase Factorial")
         all_employees = []
         cursor = None
         total_processed = 0
@@ -58,14 +57,6 @@ class Factorial:
                 has_next_page = bool(meta.get("has_next_page", False))
                 cursor = meta.get("end_cursor")
 
-                logging.info(
-                    "Pagina procesada: registros=%s, total_procesado=%s, has_next_page=%s pagina=%s",
-                    len(employees),
-                    total_processed,
-                    has_next_page,
-                    page
-                )
-
                 if not has_next_page:
                     break
 
@@ -83,8 +74,6 @@ class Factorial:
         load_dotenv(override=True)
 
         if check_connection.conexion() is True:
-            logging.info("Conexion establecida")
-            logging.info("Procesando clase Factorial")
             employees = self.get_employees() # Lista con todos los empleados de la API
         else:
             logging.error("Conexion fallida")

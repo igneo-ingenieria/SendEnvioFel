@@ -9,9 +9,7 @@ logging.basicConfig(
 )
 
 def main():
-    logging.info("Servicio Python iniciado")
 
-    logging.info("Procesandol")
     if Factorial().proceso_cumpleaños():
         time.sleep(86400) # 24 horas hasta la proxima ejecucion si no da error
         main()
